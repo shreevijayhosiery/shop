@@ -1,0 +1,26 @@
+
+  /* Add this CSS to your existing stylesheet or in a <styl> tag in your HTML */
+  .brand-logos-left,
+  .brand-logos-right {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .brand-logos-left {
+    animation: marquee-left 20s linear infinite;
+  }
+
+  .brand-logos-right {
+    animation: marquee-right 20s linear infinite;
+  }
+
+  @keyframes marquee-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes marquee-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
