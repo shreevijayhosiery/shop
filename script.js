@@ -1,40 +1,24 @@
-document.getElementById('form').addEventListener('submit', myFunction);
-
-async function myFunction(e) {
+document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    // Replace with your business phone number (include country code, no symbols)
+    const phoneNumber = "919441786401"; 
+    
     const name = document.getElementById('name').value;
+    const mobile = document.getElementById('mobilenumber').value;
     const email = document.getElementById('email').value;
-    const mobilenumber = document.getElementById('mobilenumber').value;
-    const message = document.getElementById('message').value;
     const address = document.getElementById('address').value;
+    const message = document.getElementById('message').value;
 
-    const formData = {
-        name,
-        mobilenumber,
-        email,
-        address,
-        message
-    };
+    const text = `*New Inquiry*%0A` +
+                 `*Name:* ${name}%0A` +
+                 `*Mobile:* ${mobile}%0A` +
+                 `*Email:* ${email}%0A` +
+                 `*Address:* ${address}%0A` +
+                 `*Message:* ${message}`;
 
-    try {
-        const response = await fetch('https://email-api-bice.vercel.app/sendemail', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
-        console.log(response)
-
-        if (response.status == 201) {
-            document.getElementById('exampleModalLabel').innerText = `Hey, ${name}!`;
-            document.getElementById('display-text').innerText = `I have received your mail and will respond to you shortly at ${email}.`
-            let modal = document.getElementById('exampleModal');
-            let myModal = new bootstrap.Modal(modal, {});
-            myModal.show();
-        }
-
+    window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+});
     } catch (error) {
         console.error('Error sending form data:', error);
     }
