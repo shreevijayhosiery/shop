@@ -1,477 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Vijay Hosiery</title>
+    <title>SHREE VIJAY HOSIERY | Premium Wholesale Garments</title>
+    
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Norican&family=Edu+TAS+Beginner:wght@400..700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Norican&display=swap" rel="stylesheet">
-
-<!-- custom css -->
     <style>
-      .norican-regular {
-          font-family: "Norican", cursive;
-          font-weight: 400;
-          font-style: normal;
-      }
-      .edu-tas-beginner{
-        font-family: "Edu TAS Beginner", cursive;
-        font-optical-sizing: auto;
-        font-weight:500;
-        font-style: normal;
-      }
-
-      .shopname{
-        font-family: "Edu TAS Beginner", cursive;
-        font-optical-sizing: auto;
-        font-weight:bolder;
-        font-style: normal;
-        text-shadow: 2px 2px grey;
-      }
-
-      .shadow-text{
-        font-size: 23px;
-        text-shadow: 0.5px 0.5px black;
-        font-family: "Norician", cursive;
-      }
-
-      .navy-color{
-        color: rgb(88, 88, 133);
-      }
-
-      .brand-logos img{
-        width: 130px;
-        object-fit: fill;
-      }
-
-      .light-color{
-        color: navy
-        
-      }
-
-      .hero-section{
-        background-image: url('./istockphoto-1316627338-612x612.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        padding-top: 50px;
-      }
-
-      .brand-logos div{
-        width: 150px;
-        height: 150px;
-        border-radius: 8px;
-      }
-
-      .boys-img{
-        width: 100%;
-      }
-
-      .boy-img{
-        width: 100%;
-      }
-
-      .blue-color{
-        color: blue;
-      }
-
-      .vilot-color{
-        color: rgb(241, 9, 234);
-      }
-
-      .social-icons{
-        display: none;
-      }
-
-      @media only screen and (max-width: 991px) {
-        .social-icons{
-          display: flex;
-          justify-content: space-around;
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .bento-card:hover { transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.06); }
+        .text-gradient { background: linear-gradient(to right, #fff, #a1a1a1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-mesh {
+            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
         }
-      }
-      
+        /* Custom font classes from your main page */
+        .shopname { font-family: "Edu TAS Beginner", cursive; font-weight: bolder; text-shadow: 2px 2px grey; }
+        .shadow-text { font-family: "Norician", cursive; text-shadow: 0.5px 0.5px black; }
+        .brand-logos img { filter: grayscale(20%); transition: 0.3s; }
+        .brand-logos img:hover { filter: grayscale(0%); transform: scale(1.05); }
+        a { text-decoration: none !important; }
     </style>
 </head>
-<body>
-      <!-- Navbar with toogle effect -->
-      <section>
-        <div class="header-color bg-light">
-          <nav class="container navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <!-- <img class="img-fluid" height="32px" width="32px" src="./butterfly_logo.png" alt="logo"> -->
-                <img class="img-fluid" height="64px" width="64px" src="./logo.png" alt="logo">
-              
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item text-center">
-                      <a class="nav-link active fs-5" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item text-center">
-                      <a class="nav-link fs-5" href="#shop">Shop</a>
-                    </li>
-                    <li class="nav-item text-center">
-                      <a class="nav-link fs-5" href="#contact">Contact</a>
-                    </li>
-                  </ul>
-                  <div class="social-icons">
-                    <div class="col-xs-12 col-md-5 order-0 order-md-1">
-                      <ul class="nav justify-content-center justify-content-md-end">
-            
-                        <div class="nav-item">
-                          <a href="https://www.instagram.com/shreevijayhosiery" target="_blank" class="nav-link link-dark">
-                              <img width="40px" src="./icons/new_icons/icons8-instagram.svg" alt="insta-icon">
-                          </a>
-                        </div>
-            
-                        <div class="nav-item">
-                          <a href="https://www.facebook.com/people/Shree-Vijay-Hosiery/100063756405716/" target="_blank" class="nav-link link-dark">
-                              <img width="40px" src="./icons/new_icons/icons8-facebook.svg" alt="fb-icon">
-                          </a>
-                        </div>
-            
-                        <div class="nav-item">
-                          <a href="https://wa.me/919014816666" target="_blank" class="nav-link link-dark">
-                              <img width="40px" src="./icons/new_icons/icons8-whatsapp.svg" alt="whatsapp-icon">
-                          </a>
-                        </div>
-            
-                        <div class="nav-item">
-                          <a href="mailto:shreevijayhosiery@gmail.com" target="_blank" class="nav-link link-dark">
-                              <img width="40px" src="./icons/new_icons/icons8-mail-50.png" alt="mail">
-                          </a>
-                        </div>
-            
-                      </ul>
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-              </div>
-          </nav>
+<body class="selection:bg-indigo-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 py-6 px-4">
+        <div class="max-w-6xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center">
+            <span class="font-extrabold tracking-tighter text-xl">SVH<span class="text-indigo-500">.</span></span>
+            <div class="space-x-8 text-sm font-medium hidden md:block">
+                <a href="#home" class="text-white hover:text-indigo-400 transition">Home</a>
+                <a href="#catalog" class="text-white hover:text-indigo-400 transition">Catalog</a>
+                <a href="#brands" class="text-white hover:text-indigo-400 transition">Brands</a>
+                <a href="#contact" class="text-white hover:text-indigo-400 transition">Contact</a>
+            </div>
+            <a href="https://chat.whatsapp.com/Lw4NHqHZwCyEufd8SRaOTn" class="bg-white text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-indigo-500 hover:text-white transition">JOIN COMMUNITY</a>
         </div>
-      </section>
+    </nav>
 
-      <!-- image -->
-      <!-- <section class="boys-img">
-        <img class="boy-img img-fluid" src="./close-preteen-friends-park-smiling-600nw-735971812.webp" alt="boys-img">
-      </section> -->
-
-      <!-- Home -->
-      <section id="home">
-        <div class="py-5">
-          <div class="container">
-            <div class="my-5 text-center">
-              <!-- Display content about Me -->
-              <p class="display-1 shopname">Shree Vijay Hosiery</p>
-              <h1 class="display-6 navy-color edu-tas-beginner mt-lg-6">Unleash Your Style with Our Trendy Outfits!</h1>
-              <div class="mt-5 text-secondary edu-tas-beginner">
-                <p class="h2">We deliver <span class="display-6 vilot-color">CLOTHES</span></p>
-                <p class="h2">to <span class="display-6 blue-color">RETAIL</span> shops at</p>
-                <p class="h2"><span class="display-6 text-danger">WHOLESALE</span> Prices.</p>
-              </div>
-                <div class="text-center mt-3">
-                  <a class="btn btn-secondary btn-lg" href="#contact" >Contact Us</a>
+    <section id="home" class="hero-mesh min-h-screen pt-32 pb-20 px-4 flex flex-col items-center justify-center">
+        <div class="max-w-4xl w-full text-center">
+            <span class="inline-block px-4 py-1 rounded-full border border-white/10 text-xs font-semibold tracking-widest mb-6 uppercase text-indigo-300">Since. 2014 • SHREE VIJAY HOSIERY Vijayawada</span>
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter text-gradient leading-tight">
+                Modern Threads.<br>Timeless Quality.
+            </h1>
+            <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto">Connecting the dots between high-quality hosiery and contemporary retail. Delivering bulk branded clothes at wholesale prices.</p>
+<!-- 
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+                    <a href="https://g.page/r/CTHEl1VsRer5EBE/review" target="_blank" class="glass p-4 rounded-2xl bento-card flex items-center justify-center group"><i class="fab fa-google text-xl group-hover:text-yellow-400"></i></a>
+                    <a href="https://www.instagram.com/shreevijayhosiery" target="_blank" class="glass p-4 rounded-2xl bento-card flex items-center justify-center group"><i class="fab fa-instagram text-xl group-hover:text-pink-500"></i></a>
+                    <a href="https://www.facebook.com/share/1KYAypu3Bu/" target="_blank" class="glass p-4 rounded-2xl bento-card flex items-center justify-center group"><i class="fab fa-facebook-f text-xl group-hover:text-blue-500"></i></a>
+                    <a href="https://youtube.com/@shreevijayhosiery-ssp" target="_blank" class="glass p-4 rounded-2xl bento-card flex items-center justify-center group"><i class="fab fa-youtube text-xl group-hover:text-red-500"></i></a>
+                    <a href="https://chat.whatsapp.com/Lw4NHqHZwCyEufd8SRaOTn" target="_blank" class="glass p-4 rounded-2xl bento-card flex items-center justify-center group"><i class="fab fa-whatsapp text-xl group-hover:text-green-500"></i></a>
+                    <a href="mailto:shreevijayhosiery@gmail.com" class="glass p-4 rounded-2xl bento-card flex items-center justify-center group"><i class="fas fa-envelope text-xl group-hover:text-indigo-400"></i></a>
                 </div>
             </div>
-          </div>
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L26.7,48C53.3,64,107,96,160,101.3C213.3,107,267,85,320,96C373.3,107,427,149,480,165.3C533.3,181,587,171,640,176C693.3,181,747,203,800,224C853.3,245,907,267,960,261.3C1013.3,256,1067,224,1120,208C1173.3,192,1227,192,1280,208C1333.3,224,1387,256,1413,272L1440,288L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg> -->
-        </div>
-      </section>
 
-      <section>
-        <div class="brand_imgs text-center hero-section">
-          <!-- Display pic here -->
-          <img class="img-fluid" src="./assets/man.png" alt="brand_image1" id="brand1">
-        </div>
-      </section>
+            <div class="max-w-3xl mx-auto mb-12"> -->
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+    <a href="https://g.page/r/CTHEl1VsRer5EBE/review" target="_blank" class="glass p-3 rounded-2xl bento-card flex flex-col items-center justify-center group gap-2">
+        <i class="fab fa-google text-xl group-hover:text-yellow-400 transition-colors"></i>
+        <span class="text-[10px] uppercase tracking-tighter font-bold opacity-80 group-hover:opacity-100 group-hover:text-yellow-400 transition-all">Review Us</span>
+    </a>
 
-      <!-- shop -->
+    <a href="https://www.instagram.com/shreevijayhosiery" target="_blank" class="glass p-3 rounded-2xl bento-card flex flex-col items-center justify-center group gap-2">
+        <i class="fab fa-instagram text-xl group-hover:text-pink-500 transition-colors"></i>
+        <span class="text-[10px] uppercase tracking-tighter font-bold opacity-80 group-hover:opacity-100 group-hover:text-pink-500 transition-all">Follow</span>
+    </a>
 
-      <section id="shop" class="bg-light-subtle">
-        <div class="container">
-          <div class="display-4 text-center  pt-5">Only for Men and Kids</div>
-          <div class="row justify-content-center mt-2">
-            <div class="display-6 text-center">Contact Us to Order now!</div>
-            <!-- Men's and kids wear -->
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- T-shirt -->
-                  <img class="img-fluid" src="./assets/t-shirt.png" alt="t-shirt_img">
-                  <p class="text-center shadow-text">T-shirts</p>        
-                </div>
+    <a href="https://www.facebook.com/share/1KYAypu3Bu/" target="_blank" class="glass p-3 rounded-2xl bento-card flex flex-col items-center justify-center group gap-2">
+        <i class="fab fa-facebook-f text-xl group-hover:text-blue-500 transition-colors"></i>
+        <span class="text-[10px] uppercase tracking-tighter font-bold opacity-80 group-hover:opacity-100 group-hover:text-blue-500 transition-all">Follow</span>
+    </a>
 
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- Track-pants -->
-                  <img class="img-fluid" src="./assets/track-pant.png" alt="hacking_img">
-                  <p class="text-center shadow-text">Track-pants</p>        
-                </div>
+    <a href="https://youtube.com/@shreevijayhosiery-ssp" target="_blank" class="glass p-3 rounded-2xl bento-card flex flex-col items-center justify-center group gap-2">
+        <i class="fab fa-youtube text-xl group-hover:text-red-500 transition-colors"></i>
+        <span class="text-[10px] uppercase tracking-tighter font-bold opacity-80 group-hover:opacity-100 group-hover:text-red-500 transition-all">Subscribe</span>
+    </a>
 
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- shorts -->
-                  <img class="img-fluid" src="./assets/short.png" alt="short_img">
-                  <p class="text-center shadow-text">shorts</p>        
-                </div>
+    <a href="https://wa.me/919866252649" target="_blank" class="glass p-3 rounded-2xl bento-card flex flex-col items-center justify-center group gap-2 text-center">
+        <i class="fab fa-whatsapp text-xl group-hover:text-green-500 transition-colors"></i>
+        <span class="text-[10px] uppercase tracking-tighter font-bold opacity-80 group-hover:opacity-100 group-hover:text-green-500 leading-none transition-all">Chat With Us</span>
+    </a>
 
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- Boxers -->
-                  <img class="img-fluid" src="./assets/boxer.png" alt="boxer_img">
-                  <p class="text-center shadow-text">Boxers</p>        
-                </div>
-
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- Bunny -->
-                  <img class="img-fluid" src="./assets/bunny.png" alt="bunny_img">
-                  <p class="text-center shadow-text">Baniyan</p>        
-                </div>
-
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- Under wear -->
-                  <img class="img-fluid" src="./assets/underwear.png" alt="underwear_img">
-                  <p class="text-center shadow-text">Under wear</p>        
-                </div>
-
-                <div class="col-md-4 col-6 m-5" style="max-width: 300px;">
-                  <!-- Hoodie -->
-                  <img class="img-fluid" src="./assets/hoodie.png" alt="hacking_img">
-                  <p class="text-center shadow-text">hoodies</p>        
-                </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- brands -->
-      <section id="brands">
-        <div class="container-fluid bg-light py-3">
-          <div class="row justify-content-around mb-5">
-            <div class="display-4 text-center my-3">Brands we deal with</div>
-            <div class="brand-logos row d-flex justify-content-around">
-
-              
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/glider.png" alt="glider" style="border-radius: 20px;">
-              </div>
-
-              
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/rugby.avif" alt="fs-rugby">
-              </div>
-
-              
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/fast-track.avif" alt="fast-track">
-              </div>
-
-              
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/purple_haze.avif" alt="purple-haze">
-              </div>
-
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/Lois.webp" alt="lois">
-              </div>
-
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/essa.avif" alt="essa">
-              </div>
-              
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/jerry.webp" alt="jerry">
-              </div>
-                            
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/S_G.webp" alt="s&g">
-              </div>
-                            
-              <div class="col-md-1 m-1 bg-light d-flex align-items-center">
-                <img src="./brands/techno.svg" alt="techno">
-              </div>
-              
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/high-density.svg" alt="high-density">
-              </div>
-
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/radiology.jpg" alt="radiology">
-              </div>
-
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/chill_out.png" alt="chillout">
-              </div>
-
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/grow_up.png" alt="growup">
-              </div>
-              
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/star-polo.svg" alt="star-polo">
-              </div>
-
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/unimax.png" alt="unimax">
-              </div>
-              
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/mount-jack.jpg" alt="mount-jack">
-              </div>
-              
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/okasa.svg" alt="okasa">
-              </div>
-              
-              <div class="col-md-1 m-1 bg-dark d-flex align-items-center">
-                <img src="./brands/Qee-Pee-jeans.svg" alt="Qee-Pee-Jeans">
-              </div>
-
-
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section class="container" id="contact">
-        <div class="display-4 mb-5 pt-5 text-center">Contact</div>
-        <div class="row">
-          <div class="col-xl-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./owner.jpg" style="height: 100%; width: 100%;" class="rounded" alt="passport_size_photo">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-header">Owner Contact Details</div>
-                  <div class="card-body">
-                    <h5 class="card-title">Mr. Jagdish</h5>
-                    <p class="card-text">+91 9441786401</p>
-                    <p class="card-text">shreevijayhosiery@gmail.com</p>
-                    <p class="card-text">Vijayawada, Andhra Pradesh.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="container-sm my-3">
-              <p class="h4 fw-light">Contact Us</p>
-            <form id="form">
-              <div class="mb-3">
-                <input type="text" class="form-control" id="name" placeholder="Enter your Name" required>
-              </div>
-              <div class="mb-3">
-                <input type="number" class="form-control" id="mobilenumber" placeholder="Enter your Mobile-Num" aria-describedby="emailHelp" required>
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" id="email" placeholder="Enter your Mail-ID" aria-describedby="emailHelp" required>
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control" id="address" placeholder="Enter your Address" aria-describedby="emailHelp" required>
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Type message here..." required></textarea>
-              </div>
-              <!-- Button trigger modal -->
-              <button type="submit" id="submit" class="btn btn-primary mb-3">Send Email</button>
-            </form>
-            </div>
-          </div>
-          <div class="col-xl-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.246172666413!2d80.61184357460878!3d16.513665127387913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35efe1be9c125d%3A0xf9ea456c5597c431!2sShree%20Vijay%20Hosiery!5e0!3m2!1sen!2sin!4v1717320783319!5m2!1sen!2sin" height="100%" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section>
-<div class="container">
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-        </button>
-      </div>
-      <div class="modal-body">
-        <p id="display-text"></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+    <a href="mailto:shreevijayhosiery@gmail.com" class="glass p-3 rounded-2xl bento-card flex flex-col items-center justify-center group gap-2">
+        <i class="fas fa-envelope text-xl group-hover:text-indigo-400 transition-colors"></i>
+        <span class="text-[10px] uppercase tracking-tighter font-bold opacity-80 group-hover:opacity-100 group-hover:text-indigo-400 transition-all">Connect</span>
+    </a>
+</div>
 </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Footer -->
-  <!-- Footer 2 - Bootstrap Brain Component -->
-  <footer class="footer mt-5">
-
-  <!-- Copyright - Bootstrap Brain Component -->
-  <div class="bg-light py-4 py-md-5 py-xl-8 border-top border-light-subtle">
-    <div class="container overflow-hidden">
-      <div class="row gy-4 gy-md-0">
-        <div class="col-xs-12 col-md-7 order-1 order-md-0">
-          <div class="copyright text-center text-md-start">
-            &copy; 2024. All Rights Reserved.
-          </div>
-          <div class="credits text-secondary text-center text-md-start mt-2 fs-7">
-            Built by <a href="mailto:padevenkataramprasad@gmail.com" target="_blank" class="link-secondary text-decoration-none">Ramprasad</a> with <span class="text-primary">&#9829;</span>
-          </div>
+    <section id="catalog" class="py-24 px-4 bg-[#0d0d0d]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold mb-12 text-center">Only for Men and Kids</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/t-shirt.png" class="h-32 mx-auto mb-4 object-contain" alt="T-shirts">
+                    <p class="shadow-text text-xl">T-shirts</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/track-pant.png" class="h-32 mx-auto mb-4 object-contain" alt="Trackpants">
+                    <p class="shadow-text text-xl">Tracks</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/short.png" class="h-32 mx-auto mb-4 object-contain" alt="Shorts">
+                    <p class="shadow-text text-xl">Shorts</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/hoodie.png" class="h-32 mx-auto mb-4 object-contain" alt="Hoodies">
+                    <p class="shadow-text text-xl">Hoodies</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/boxer.png" class="h-32 mx-auto mb-4 object-contain" alt="Boxers">
+                    <p class="shadow-text text-xl">Boxers</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/bunny.png" class="h-32 mx-auto mb-4 object-contain" alt="Baniyan">
+                    <p class="shadow-text text-xl">Baniyan</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center">
+                    <img src="./assets/underwear.png" class="h-32 mx-auto mb-4 object-contain" alt="Underwear">
+                    <p class="shadow-text text-xl">Underwear</p>
+                </div>
+                <div class="glass p-6 rounded-3xl bento-card text-center flex flex-col justify-center border-dashed border-2 border-white/10">
+                    <p class="text-indigo-400 font-bold uppercase tracking-widest text-xs">More Styles</p>
+                    <p class="text-white text-sm">Coming Soon</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-xs-12 col-md-5 order-0 order-md-1">
-          <ul class="nav justify-content-center justify-content-md-end">
-
-            <div class="nav-item">
-              <a href="https://www.instagram.com/shreevijayhosiery" target="_blank" class="nav-link link-dark">
-                  <img width="40px" src="./icons/new_icons/icons8-instagram.svg" alt="insta-icon">
-              </a>
+    <section id="brands" class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-center mb-4 text-white">Brands We Deal With</h2>
+            <p class="text-center text-gray-500 mb-12">Quality assurance from the industry's best.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 brand-logos">
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/glider.png" class="max-h-full max-w-full object-contain" alt="glider">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/rugby.avif" class="max-h-full max-w-full object-contain" alt="rugby">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/fast-track.avif" class="max-h-full max-w-full object-contain" alt="fast">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/purple_haze.avif" class="max-h-full max-w-full object-contain" alt="purple">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/Lois.webp" class="max-h-full max-w-full object-contain" alt="lois">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/essa.avif" class="max-h-full max-w-full object-contain" alt="essa">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/jerry.webp" class="max-h-full max-w-full object-contain" alt="jerry">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/S_G.webp" class="max-h-full max-w-full object-contain" alt="sg">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/techno.svg" class="max-h-full max-w-full object-contain" alt="techno">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/high-density.svg" class="max-h-full max-w-full object-contain" alt="hd">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/radiology.jpg" class="max-h-full max-w-full object-contain" alt="radio">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/chill_out.png" class="max-h-full max-w-full object-contain" alt="chill">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/grow_up.png" class="max-h-full max-w-full object-contain" alt="grow">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/star-polo.svg" class="max-h-full max-w-full object-contain" alt="star">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/unimax.png" class="max-h-full max-w-full object-contain" alt="unimax">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/mount-jack.jpg" class="max-h-full max-w-full object-contain" alt="mount">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/okasa.svg" class="max-h-full max-w-full object-contain" alt="okasa">
+                </div>
+                <div class="bg-white p-3 rounded-2xl w-32 h-32 flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                    <img src="./brands/Qee-Pee-jeans.svg" class="max-h-full max-w-full object-contain" alt="qp">
+                </div>
             </div>
-
-            <div class="nav-item">
-              <a href="https://www.facebook.com/people/Shree-Vijay-Hosiery/100063756405716/" target="_blank" class="nav-link link-dark">
-                  <img width="40px" src="./icons/new_icons/icons8-facebook.svg" alt="fb-icon">
-              </a>
-            </div>
-
-            <div class="nav-item">
-              <a href="https://wa.me/919014816666" target="_blank" class="nav-link link-dark">
-                  <img width="40px" src="./icons/new_icons/icons8-whatsapp.svg" alt="whatsapp-icon">
-              </a>
-            </div>
-
-            <div class="nav-item">
-              <a href="mailto:shreevijayhosiery@gmail.com" target="_blank" class="nav-link link-dark">
-                  <img width="40px" src="./icons/new_icons/icons8-mail-50.png" alt="mail">
-              </a>
-            </div>
-
-          </ul>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<!-- External scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <section id="contact" class="py-12 md:py-24 px-4 max-w-6xl mx-auto">
+    <div class="glass rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 backdrop-blur-lg bg-white/5 border border-white/10">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-8 md:mb-12 text-center text-white">Get In Touch</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            
+            <div class="space-y-6">
+                <div class="glass p-6 rounded-3xl flex flex-col sm:flex-row items-center gap-6 border border-white/10">
+                    <img src="./owner.jpg" class="w-24 h-24 md:w-28 md:h-28 rounded-2xl object-cover shadow-lg" alt="Owner">
+                    <div class="text-center sm:text-left flex-1 w-full">
+                        <h5 class="text-xl font-bold mb-3 text-white">Mr. Jagdish</h5>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="tel:+919441786401" class="glass p-3 rounded-2xl flex flex-col items-center justify-center group gap-1 transition-all hover:bg-white/10 border border-white/10">
+                                <i class="fas fa-phone-alt text-lg text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                                <span class="text-[10px] uppercase font-bold tracking-wider text-gray-300">Call Us</span>
+                            </a>
+                            <a href="mailto:shreevijayhosiery@gmail.com" class="glass p-3 rounded-2xl flex flex-col items-center justify-center group gap-1 transition-all hover:bg-white/10 border border-white/10">
+                                <i class="fas fa-envelope text-lg text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                                <span class="text-[10px] uppercase font-bold tracking-wider text-gray-300">Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-6 md:p-8 rounded-3xl space-y-4 border border-white/10">
+                    <p class="flex items-start gap-4 text-gray-300 text-sm md:text-base">
+                        <i class="fas fa-map-pin mt-1 text-indigo-500 shrink-0"></i>
+                        <span>12-5-19, Near Tarapet 1 Town, Hari Patchasahab Street, Vijayawada - 520001</span>
+                    </p>
+                    <p class="flex items-center gap-4 text-gray-300 text-sm md:text-base">
+                        <i class="fas fa-clock text-indigo-500 shrink-0"></i>
+                        <span>9:00 AM — 10:00 PM (Daily)</span>
+                    </p>
+                </div>
+
+                <div class="rounded-3xl overflow-hidden h-48 md:h-64 glass border border-white/10">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2476260456765!2d80.61095043488774!3d16.513591700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35efe1be9c125d%3A0xf9ea456c5597c431!2sSHREE%20VIJAY%20HOSIERY!5e0!3m2!1sen!2sin!4v1776760731828!5m2!1sen!2sin" 
+                        height="100%" width="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(90%);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="glass p-6 sm:p-10 rounded-[2rem] shadow-2xl border border-white/20 bg-white/5">
+                <p class="text-2xl font-bold mb-8 text-white tracking-tty="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="./script.js"></script>
 </body>
 </html>
